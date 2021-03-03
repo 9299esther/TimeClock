@@ -12,6 +12,7 @@ if($conn->connect_error){
 echo "<br>Connected successfully<br>";
 
 function list_all(){
+	global $conn;
 	$result = $conn->query("select * from user");
 
 	if ($result->num_rows > 0) {
