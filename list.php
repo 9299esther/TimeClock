@@ -15,7 +15,7 @@ function add_user(){
 	global $conn;
 	// Do whatever
 	echo "NOT ";
-	echo "Done";
+	echo "Done<br>";
 	list_all();
 	
 }
