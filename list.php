@@ -11,6 +11,15 @@ if($conn->connect_error){
 }
 echo "<br>Connected successfully<br>";
 
+function add_user(){
+	global $conn;
+	// Do whatever
+	echo "NOT ";
+	echo "Done";
+	list_all();
+	
+}
+
 function list_all(){
 	global $conn;
 	$result = $conn->query("select * from user");
@@ -25,4 +34,12 @@ function list_all(){
 	}
 }
 ?>
+<!DOCTYPE html>
+<html lang="en-US">
+<head><title>Time Clock Add User</title>
+</head><body>
+	Here is a list of all your users
 <?php list_all() ?>
+Add name of new user
+<?php add_user() ?>	
+</body></html>
