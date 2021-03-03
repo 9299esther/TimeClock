@@ -3,7 +3,7 @@ echo "Hello world!";
 
 // Connect to datase
 //
-$conn=new mysqli("localhost", "Esther", "Esther","Esther1");
+$conn=new mysqli("localhost", "Esther", "Esther","timeclock");
 
 // Check connection
 if($conn->connect_error){
