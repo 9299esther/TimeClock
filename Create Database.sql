@@ -1,4 +1,4 @@
-create database timeclock;
+// create database timeclock;
 use timeclock;
 create table user( id int not null auto_increment, name varchar (50), date_created datetime, primary key (id));
 
