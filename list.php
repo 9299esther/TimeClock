@@ -11,14 +11,17 @@ if($conn->connect_error){
 }
 echo "<br>Connected successfully<br>";
 
-$result = $conn->query("select * from user");
+function list_all(){
+	$result = $conn->query("select * from user");
 
-if ($result->num_rows > 0) {
+	if ($result->num_rows > 0) {
 	// output data of each row
-	while($row=$result->fetch_assoc()) {
-		echo "id: <b>".$row["id"]."</b> - Name:<b> " . $row["name"]. "</b> - Date Created: " . $row["date_created"]. "<br>";
+		while($row=$result->fetch_assoc()) {
+			echo "id: <b>".$row["id"]."</b> - Name:<b> " . $row["name"]. "</b> - Date Created: " . $row["date_created"]. "<br>";
+		}
+	} else {
+		echo "0 results";
 	}
-} else {
-	echo "0 results";
 }
 ?>
+<?php list_all() ?>
