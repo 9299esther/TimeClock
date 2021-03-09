@@ -26,9 +26,29 @@ function list_all(){
 
 	if ($result->num_rows > 0) {
 	// output data of each row
+		echo `<table style="width:100%">`;
+		echo `<tr>`;
+			echo `<th>"ID"</th>`;
+			echo `<th>Name</th>`;
+			echo `<th>Date</th>`;
+		echo `</tr>`;
 		while($row=$result->fetch_assoc()) {
-			echo "id: <b>".$row["id"]."</b> - Name:<b> " . $row["name"]. "</b> - Date Created: " . $row["date_created"]. "<br>";
+			echo `<tr>`;
+				echo`<td>`;
+				echo $row["id"];
+				echo`</td>`;
+
+				echo`<td>`;
+				echo $row["name"];
+				echo`</td>`;
+
+				echo`<td>`;
+				echo $row["date_created"];
+				echo`</td>`;
+			echo `</tr>`;
 		}
+		echo `</table>`;
+	}
 	} else {
 		echo "0 results";
 	}
