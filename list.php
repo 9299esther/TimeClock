@@ -29,8 +29,8 @@ function list_all(){
 		echo `<table style="width:100%">`;
 		echo `<tr>`;
 			echo `<th>"ID"</th>`;
-			echo `<th>Name</th>`;
-			echo `<th>Date</th>`;
+			echo `<th>"Name"</th>`;
+			echo `<th>"Date"</th>`;
 		echo `</tr>`;
 		while($row=$result->fetch_assoc()) {
 			echo `<tr>`;
