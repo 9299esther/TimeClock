@@ -49,7 +49,7 @@ function list_all(){
 		}
 		echo `</table>`;
 	}
-	} else {
+	else {
 		echo "0 results";
 	}
 }
