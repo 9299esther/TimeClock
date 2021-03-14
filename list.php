@@ -27,11 +27,17 @@ function list_all(){
 	if ($result->num_rows > 0) {
 	// output data of each row
 		echo `<table style="width:100%">`;
-		echo `<tr>`;
-			echo `<th>"ID"</th>`;
-			echo `<th>"Name"</th>`;
-			echo `<th>"Date"</th>`;
-		echo `</tr>`;
+			echo `<tr>`;
+				echo `<th>"ID"</th>`;
+				echo `<th>"Name"</th>`;
+				echo `<th>"Date"</th>`;
+			echo `</tr>`;
+			echo `<tr>`;
+				echo`<td>`;
+				echo `<th>"Name"</th>`;
+				echo`</td>`;
+			echo `</tr>`;
+		echo `</table>`;
 		while($row=$result->fetch_assoc()) {
 			echo `<tr>`;
 				echo`<td>`;
@@ -47,7 +53,7 @@ function list_all(){
 				echo`</td>`;
 			echo `</tr>`;
 		}
-		echo `</table>`;
+		//echo `</table>`;
 	}
 	else {
 		echo "0 results";
