@@ -28,7 +28,7 @@ function list_all(){
 	// output data of each row
 		echo `<table>`;
 		echo `<tr>`;
-			echo `<th>`"ID"`</th>`;
+			echo `<th>"ID"</th>`;
 			echo `<th>"Name"</th>`;
 			echo `<th>"Date"</th>`;
 		echo `</tr>`;
