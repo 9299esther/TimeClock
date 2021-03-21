@@ -25,7 +25,7 @@ function list_all(){
 	$result = $conn->query("select * from user");
 
 	if ($result->num_rows > 0) {
-	echo output data of each row
+	// output data of each row
 		echo "<table>
 		<tr>
 			<th>ID</th>
