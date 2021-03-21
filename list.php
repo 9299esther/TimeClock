@@ -25,29 +25,22 @@ function list_all(){
 	$result = $conn->query("select * from user");
 
 	if ($result->num_rows > 0) {
-	// output data of each row
-		echo `<table>`;
-		echo `<tr>`;
-			echo `<th>"ID"</th>`;
-			echo `<th>"Name"</th>`;
-			echo `<th>"Date"</th>`;
-		echo `</tr>`;
+	echo output data of each row
+		echo "<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Date</th>
+		</tr>";
 		while($row=$result->fetch_assoc()) {
-			echo `<tr>`;
-				echo`<b>`;
-				echo  $row["id"];
-				echo`</b>`;
+			echo "<tr>";
+				echo "<td>". $row["id"]."</td>";
+				echo "<td>". $row["name"]."</td>";
+				echo "<td>". $row["date_created"]."</td>";
 
-				echo`<td>`;
-				echo $row["name"];
-				echo`</td>`;
-
-				echo`<td>`;
-				echo $row["date_created"];
-				echo`</td>`;
-			echo `</tr>`;
+			echo "</tr>";
 		}
-		echo `</table>`;
+		echo "</table>";
 	}
 	else {
 		echo "0 results";
@@ -60,6 +53,6 @@ function list_all(){
 </head><body>
 	<h1>Here is a list of all your users:<br></h1>
 <?php list_all() ?>
-	<button>Add name of new user</button>
+	<br><button>Add name of new user</button><br>
 <?php add_user() ?>	
 </body></html>
