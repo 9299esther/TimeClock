@@ -34,9 +34,9 @@ function list_all(){
 		echo `</tr>`;
 		while($row=$result->fetch_assoc()) {
 			echo `<tr>`;
-				echo`<td>`;
-				echo `<b> $row["id"]</b>`;
-				echo`</td>`;
+				echo`<b>`;
+				echo  $row["id"];
+				echo`</b>`;
 
 				echo`<td>`;
 				echo $row["name"];
