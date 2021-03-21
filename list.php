@@ -26,22 +26,16 @@ function list_all(){
 
 	if ($result->num_rows > 0) {
 	// output data of each row
-		echo `<table style="width:100%">`;
-			echo `<tr>`;
-				echo `<th>"ID"</th>`;
-				echo `<th>"Name"</th>`;
-				echo `<th>"Date"</th>`;
-			echo `</tr>`;
-			echo `<tr>`;
-				echo`<td>`;
-				echo `<th>"Name"</th>`;
-				echo`</td>`;
-			echo `</tr>`;
-		echo `</table>`;
+		echo `<table>`;
+		echo `<tr>`;
+			echo `<th>`"ID"`</th>`;
+			echo `<th>"Name"</th>`;
+			echo `<th>"Date"</th>`;
+		echo `</tr>`;
 		while($row=$result->fetch_assoc()) {
 			echo `<tr>`;
 				echo`<td>`;
-				echo $row["id"];
+				echo `<b>` $row["id"]`</b>`;
 				echo`</td>`;
 
 				echo`<td>`;
@@ -53,7 +47,7 @@ function list_all(){
 				echo`</td>`;
 			echo `</tr>`;
 		}
-		//echo `</table>`;
+		echo `</table>`;
 	}
 	else {
 		echo "0 results";
@@ -64,8 +58,8 @@ function list_all(){
 <html lang="en-US">
 <head><title>Time Clock Add User</title>
 </head><body>
-	Here is a list of all your users
+	<h1>Here is a list of all your users:<br></h1>
 <?php list_all() ?>
-Add name of new user
+	<button>Add name of new user</button>
 <?php add_user() ?>	
 </body></html>
